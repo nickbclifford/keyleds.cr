@@ -1,6 +1,5 @@
-# TODO: Write documentation for `Keyleds`
+require "./device"
+
 module Keyleds
   VERSION = "0.1.0"
-
-  # TODO: Put your code here
 end
