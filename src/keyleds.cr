@@ -1,3 +1,4 @@
+require "./codes"
 require "./device"
 require "./strings"
 

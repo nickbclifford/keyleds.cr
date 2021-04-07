@@ -90,7 +90,7 @@ class Keyleds::Device
   end
 
   def keyboard_layout
-    LibKeyleds
+    with_target(keyboard_layout)
   end
 
   def leds(block : LibKeyleds::BlockId, offset : UInt16, num_keys : UInt32)
