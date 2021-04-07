@@ -1,11 +1,5 @@
 require "./libkeyleds"
 
-struct LibKeyleds::KeyblocksInfo
-  def to_slice
-    Slice.new(pointerof(@blocks), @length)
-  end
-end
-
 module Keyleds
   alias BlockId = LibKeyleds::BlockId
   alias GkeysType = LibKeyleds::GkeysType
