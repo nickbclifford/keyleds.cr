@@ -6,7 +6,7 @@ module Keyleds::Strings
       hash = {} of UInt32 => String
       (0..).each do |i|
         entry = LibKeyleds.keyleds_{{name.id}}.to_unsafe[i]
-        break if entry.id == 0
+        break if entry.id == 0 && entry.str.null?
         hash[entry.id] = String.new(entry.str)
       end
       hash
