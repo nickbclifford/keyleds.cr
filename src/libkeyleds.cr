@@ -114,7 +114,7 @@ lib LibKeyleds
     transport : UInt16
     model : UInt8[6]
     length : LibC::UInt
-    protocols : DeviceProtocol[0]
+    protocols : DeviceProtocol # TODO: fix VLA
   end
 
   struct DeviceProtocol
@@ -142,7 +142,7 @@ lib LibKeyleds
 
   struct KeyblocksInfo
     length : LibC::UInt
-    blocks : Keyblock[0]
+    blocks : Keyblock # TODO: fix VLA
   end
 
   struct Keyblock

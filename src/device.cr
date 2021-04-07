@@ -36,8 +36,9 @@ class Keyleds::Device
 
   def blocks : Array(Keyblock)
     try(get_block_info, out ptr)
-    info = ptr.value
-    Slice.new(info.blocks.to_unsafe, info.length).to_a
+    # VLA hackery, see comment in libkeyleds.cr
+    data_ptr = (ptr.as(UInt8*) + offsetof(LibKeyleds::KeyblocksInfo, @blocks)).as(Keyblock*)
+    Slice.new(data_ptr, ptr.value.length).to_a
   end
 
   def commit_leds
@@ -173,7 +174,9 @@ class Keyleds::Device
     try(get_device_version, out version_ptr)
     v = version_ptr.value
 
-    protocols = Slice.new(v.protocols.to_unsafe, v.length).map do |p|
+    # ditto
+    data_ptr = (version_ptr.as(UInt8*) + offsetof(LibKeyleds::DeviceVersion, @protocols)).as(LibKeyleds::DeviceProtocol*)
+    protocols = Slice.new(data_ptr, v.length).map do |p|
       Protocol.new(
         p.type,
         String.new(p.prefix.to_unsafe),
