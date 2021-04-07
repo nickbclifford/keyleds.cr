@@ -7,3 +7,6 @@ authors:
 crystal: 1.0.0
 
 license: MIT
+
+libraries:
+  libkeyleds: ">= 1.1.1"

@@ -1,6 +1,6 @@
 # keyleds.cr
 
-TODO: Write a description here
+A Crystal interface to the [`libkeyleds`](https://github.com/keyleds/keyleds) library.
 
 ## Installation
 
@@ -21,10 +21,6 @@ require "keyleds"
 ```
 
 TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 
