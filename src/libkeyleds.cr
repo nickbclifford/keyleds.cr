@@ -60,6 +60,9 @@ lib LibKeyleds
     KeyboardLayoutInvalid = -1
   end
 
+  APP_ID_MIN = 0x0_u8
+  APP_ID_MAX = 0xf_u8
+
   TARGET_DEFAULT = 0xff_u8
 
   fun close = keyleds_close(device : Keyleds)

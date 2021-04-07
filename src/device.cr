@@ -1,11 +1,18 @@
 require "./error"
 require "./libkeyleds"
 
+id_range = LibKeyleds::APP_ID_MIN..LibKeyleds::APP_ID_MAX
+
 class Keyleds::Device
   @device : LibKeyleds::Keyleds
 
-  def initialize(path : String)
-    unless @device = LibKeyleds.open(path, APP_ID)
+  def initialize(path : String, app_id : UInt8)
+    unless id_range.includes?(app_id)
+      raise ArgumentError.new("app id must be between #{id_range.start} and #{id_range.end}")
+    end
+
+    # error state indicated by null pointer
+    unless @device = LibKeyleds.open(path, app_id)
       raise Error.from_keyleds
     end
   end
@@ -13,6 +20,9 @@ class Keyleds::Device
   def close
     LibKeyleds.close(@device)
   end
+
+  # NOTE: After going through the other keyleds sources, only TARGET_DEFAULT is ever used for this parameter.
+  # What's its actual purpose? Dunno, but everything breaks if you use anything else.
 
   def name
     try(get_device_name, @device, LibKeyleds::TARGET_DEFAULT, out ptr)
