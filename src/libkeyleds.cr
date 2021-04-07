@@ -1,10 +1,12 @@
 @[Link("keyleds")]
 lib LibKeyleds
-  $keyleds_block_id_names : IndexedString*
-  $keyleds_device_types   : IndexedString*
-  $keyleds_feature_names  : IndexedString*
-  $keyleds_keycode_names  : IndexedString*
-  $keyleds_protocol_types : IndexedString*
+  # Zero-length arrays are VLAs, https://github.com/crystal-lang/crystal/issues/10598
+
+  $keyleds_block_id_names : IndexedString[0]
+  $keyleds_device_types   : IndexedString[0]
+  $keyleds_feature_names  : IndexedString[0]
+  $keyleds_keycode_names  : IndexedString[0]
+  $keyleds_protocol_types : IndexedString[0]
 
   alias GkeysCb = (Keyleds, UInt8, GkeysType, UInt16, Void* -> Void)
 
@@ -140,7 +142,7 @@ lib LibKeyleds
 
   struct KeyblocksInfo
     length : LibC::UInt
-    blocks : Keyblock # This is a flexible array member, https://github.com/crystal-lang/crystal/issues/10598
+    blocks : Keyblock[0]
   end
 
   struct Keyblock
@@ -152,10 +154,4 @@ lib LibKeyleds
   end
 
   type Keyleds = Void*
-end
-
-struct LibKeyleds::KeyblocksInfo
-  def to_slice
-    Slice.new(pointerof(blocks), length)
-  end
 end
