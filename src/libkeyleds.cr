@@ -114,10 +114,10 @@ lib LibKeyleds
     transport : UInt16
     model : UInt8[6]
     length : LibC::UInt
-    protocols : DeviceVersionProtocols*
+    protocols : DeviceProtocol[0]
   end
 
-  struct DeviceVersionProtocols
+  struct DeviceProtocol
     type : UInt8
     prefix : LibC::Char[4]
     version_major : LibC::UInt
