@@ -1,3 +1,4 @@
+require "./bridge"
 require "./error"
 require "./libkeyleds"
 
@@ -33,10 +34,10 @@ class Keyleds::Device
     LibKeyleds.close(@device)
   end
 
-  def block_info
+  def blocks : Array(Keyblock)
     try(get_block_info, out ptr)
     info = ptr.value
-    Slice.new(info.blocks.to_unsafe, info.length)
+    Slice.new(info.blocks.to_unsafe, info.length).to_a
   end
 
   def commit_leds
@@ -47,19 +48,19 @@ class Keyleds::Device
     try(gkeys_enable, enabled)
   end
 
-  def fd
+  def fd : IO::FileDescriptor
     IO::FileDescriptor.new(LibKeyleds.device_fd(@device))
   end
 
-  def feature_count
+  def feature_count : UInt32
     with_target(get_feature_count)
   end
 
-  def feature_id(feature_index : UInt8)
+  def feature_id(feature_index : UInt8) : UInt16
     with_target(get_feature_id, feature_index)
   end
 
-  def feature_index(feature_id : UInt16)
+  def feature_index(feature_id : UInt16) : UInt8
     with_target(get_feature_index, feature_id)
   end
 
@@ -71,7 +72,7 @@ class Keyleds::Device
     try(gamemode_clear, key_ids.to_unsafe, key_ids.size)
   end
 
-  def gamemode_max_blocked
+  def gamemode_max_blocked : UInt32
     try(gamemode_max, out max)
     max
   end
@@ -84,28 +85,28 @@ class Keyleds::Device
     try(gamemode_set, key_ids.to_unsafe, key_ids.size)
   end
 
-  def gkeys_count
+  def gkeys_count : UInt32
     try(gkeys_count, out count)
     count
   end
 
-  def keyboard_layout
+  def keyboard_layout : KeyboardLayout
     with_target(keyboard_layout)
   end
 
-  def leds(block : LibKeyleds::BlockId, offset : UInt16, num_keys : UInt32)
-    Array(LibKeyleds::KeyColor).build(num_keys) do |buf|
+  def leds(block : BlockId, offset : UInt16, num_keys : UInt32) : Array(KeyColor)
+    Array(KeyColor).build(num_keys) do |buf|
       try(get_leds, block, buf, offset, num_keys)
       num_keys
     end
   end
 
-  def name
+  def name : String
     try(get_device_name, out ptr)
     String.new(ptr)
   end
 
-  def on_gkey(&callback : LibKeyleds::GkeysType, UInt16 ->)
+  def on_gkey(&callback : GkeysType, UInt16 ->)
     box = Box.box(callback)
     @cb = box
 
@@ -118,12 +119,12 @@ class Keyleds::Device
     try(ping)
   end
 
-  def protocol
+  def protocol : ProtocolSpec
     try(get_protocol, out version, out handler)
     {version: version, handler: handler}
   end
 
-  def reportrate
+  def reportrate : UInt32
     try(get_reportrate, out rate)
     rate
   end
@@ -152,7 +153,7 @@ class Keyleds::Device
     LibKeyleds.set_timeout(@device, microseconds)
   end
 
-  def supported_rates
+  def supported_rates : Array(UInt32)
     try(get_reportrates, out rates)
     arr = [] of UInt32
     (0..).each do |i|
@@ -163,14 +164,29 @@ class Keyleds::Device
     arr
   end
 
-  def type
+  def type : Type
     try(get_device_type, out type)
     type
   end
 
-  def version
+  def version : Version
     try(get_device_version, out version_ptr)
-    version_ptr.value
+    v = version_ptr.value
+
+    protocols = Slice.new(v.protocols.to_unsafe, v.length).map do |p|
+      Protocol.new(
+        p.type,
+        String.new(p.prefix.to_unsafe),
+        p.version_major,
+        p.version_minor,
+        p.build,
+        p.is_active,
+        p.product_id,
+        p.misc
+      )
+    end.to_a
+
+    Version.new(v.serial, v.transport, v.model, protocols)
   end
 
   # NOTE: After going through the other keyleds sources, only TARGET_DEFAULT is ever used for the target parameter.
