@@ -3,9 +3,9 @@ lib LibKeyleds
   # Zero-length arrays are VLAs, https://github.com/crystal-lang/crystal/issues/10598
 
   $keyleds_block_id_names : IndexedString[0]
-  $keyleds_device_types   : IndexedString[0]
-  $keyleds_feature_names  : IndexedString[0]
-  $keyleds_keycode_names  : IndexedString[0]
+  $keyleds_device_types : IndexedString[0]
+  $keyleds_feature_names : IndexedString[0]
+  $keyleds_keycode_names : IndexedString[0]
   $keyleds_protocol_types : IndexedString[0]
 
   alias GkeysCb = (Keyleds, UInt8, GkeysType, UInt16, Void* -> Void)
