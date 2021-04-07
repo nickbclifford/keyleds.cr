@@ -9,6 +9,15 @@ class Keyleds::Device
 
   @device : LibKeyleds::Keyleds
 
+  def self.open(path : String, app_id : UInt8)
+    dev = new(path, app_id)
+    begin
+      yield dev
+    ensure
+      dev.close
+    end
+  end
+
   def initialize(path : String, app_id : UInt8)
     unless APP_IDS.includes?(app_id)
       raise ArgumentError.new("app id must be between #{APP_IDS.begin} and #{APP_IDS.end}")
