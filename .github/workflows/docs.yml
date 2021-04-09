@@ -5,6 +5,7 @@ on: release
 jobs:
   docs:
     name: Build and publish docs
+    runs-on: ubuntu-latest
     container: crystallang/crystal:latest
     steps:
       - uses: actions/checkout@v2
