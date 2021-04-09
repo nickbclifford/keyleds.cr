@@ -2,6 +2,9 @@
 
 A Crystal interface to the [`libkeyleds`](https://github.com/keyleds/keyleds) library.
 
+## License
+As a derived work of `keyleds`, these bindings are licensed under the GNU GPLv3.
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
