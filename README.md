@@ -2,6 +2,8 @@
 
 A Crystal interface to the [`libkeyleds`](https://github.com/keyleds/keyleds) library.
 
+[**API Documentation**](https://nickbclifford.github.io/keyleds.cr/)
+
 ## License
 
 As a derived work of `keyleds`, these bindings are licensed under the GNU GPLv3.
