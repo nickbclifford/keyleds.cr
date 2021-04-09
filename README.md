@@ -3,6 +3,7 @@
 A Crystal interface to the [`libkeyleds`](https://github.com/keyleds/keyleds) library.
 
 ## License
+
 As a derived work of `keyleds`, these bindings are licensed under the GNU GPLv3.
 
 ## Installation
@@ -21,9 +22,16 @@ As a derived work of `keyleds`, these bindings are licensed under the GNU GPLv3.
 
 ```crystal
 require "keyleds"
-```
 
-TODO: Write usage instructions here
+APP_ID = 1_u8
+
+Keyleds::Device.open("/dev/hidraw1", APP_ID) do |device|
+  puts device.name
+
+  device.set_led_block(:logo, red: 0, blue: 255, green: 0)
+  device.commit_leds
+end
+```
 
 ## Contributing
 

@@ -1,5 +1,6 @@
 require "./libkeyleds"
 
+# Module containing mapping hashes between various integer IDs and their human-readable names.
 module Keyleds::Strings
   {% for name in %w(block_id_names device_types feature_names keycode_names protocol_types) %}
     {{name.upcase.id}} = begin
