@@ -1,0 +1,17 @@
+name: Publish documentation
+
+on: release
+
+jobs:
+  docs:
+    name: Build and publish docs
+    container: crystallang/crystal:latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build docs
+        run: crystal docs
+      - name: Publish to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: build
