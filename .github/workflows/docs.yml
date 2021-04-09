@@ -1,14 +1,19 @@
 name: Publish documentation
 
-on: release
+on:
+  release:
+    types: [published]
 
 jobs:
   docs:
     name: Build and publish docs
     runs-on: ubuntu-latest
-    container: crystallang/crystal:latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install Crystal
+        uses: oprypin/install-crystal@v1
+        with:
+          crystal: latest
       - name: Build docs
         run: crystal docs
       - name: Publish to GitHub Pages
