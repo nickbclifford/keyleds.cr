@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="crystal_docs.project_version" content="1.0.0">
+<meta name="crystal_docs.project_name" content="keyleds">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="keyleds">
+  <title>Keyleds::Device - keyleds 1.0.0</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          keyleds
+        </a>
+      </h1>
+
+      <span class="project-version">
+        1.0.0
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="keyleds/Keyleds" data-name="keyleds">
+      <a href="../Keyleds.html">Keyleds</a>
+      
+        <ul>
+  
+  <li class=" " data-id="keyleds/Keyleds/BlockId" data-name="keyleds::blockid">
+      <a href="../Keyleds/BlockId.html">BlockId</a>
+      
+    </li>
+  
+  <li class="parent " data-id="keyleds/Keyleds/Codes" data-name="keyleds::codes">
+      <a href="../Keyleds/Codes.html">Codes</a>
+      
+        <ul>
+  
+  <li class=" " data-id="keyleds/Keyleds/Codes/LogitechScancode" data-name="keyleds::codes::logitechscancode">
+      <a href="../Keyleds/Codes/LogitechScancode.html">LogitechScancode</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="keyleds/Keyleds/Device" data-name="keyleds::device">
+      <a href="../Keyleds/Device.html">Device</a>
+      
+        <ul>
+  
+  <li class=" " data-id="keyleds/Keyleds/Device/Handler" data-name="keyleds::device::handler">
+      <a href="../Keyleds/Device/Handler.html">Handler</a>
+      
+    </li>
+  
+  <li class=" " data-id="keyleds/Keyleds/Device/Protocol" data-name="keyleds::device::protocol">
+      <a href="../Keyleds/Device/Protocol.html">Protocol</a>
+      
+    </li>
+  
+  <li class=" " data-id="keyleds/Keyleds/Device/ProtocolSpec" data-name="keyleds::device::protocolspec">
+      <a href="../Keyleds/Device/ProtocolSpec.html">ProtocolSpec</a>
+      
+    </li>
+  
+  <li class=" " data-id="keyleds/Keyleds/Device/Type" data-name="keyleds::device::type">
+      <a href="../Keyleds/Device/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="keyleds/Keyleds/Device/Version" data-name="keyleds::device::version">
+      <a href="../Keyleds/Device/Version.html">Version</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="keyleds/Keyleds/Error" data-name="keyleds::error">
+      <a href="../Keyleds/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="keyleds/Keyleds/GkeysType" data-name="keyleds::gkeystype">
+      <a href="../Keyleds/GkeysType.html">GkeysType</a>
+      
+    </li>
+  
+  <li class=" " data-id="keyleds/Keyleds/Keyblock" data-name="keyleds::keyblock">
+      <a href="../Keyleds/Keyblock.html">Keyblock</a>
+      
+    </li>
+  
+  <li class=" " data-id="keyleds/Keyleds/KeyboardLayout" data-name="keyleds::keyboardlayout">
+      <a href="../Keyleds/KeyboardLayout.html">KeyboardLayout</a>
+      
+    </li>
+  
+  <li class=" " data-id="keyleds/Keyleds/KeyColor" data-name="keyleds::keycolor">
+      <a href="../Keyleds/KeyColor.html">KeyColor</a>
+      
+    </li>
+  
+  <li class=" " data-id="keyleds/Keyleds/Strings" data-name="keyleds::strings">
+      <a href="../Keyleds/Strings.html">Strings</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Keyleds::Device
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Keyleds/Device.html">Keyleds::Device</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Represents a physical Logitech device that can be interfaced with.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/bridge.cr#L20" target="_blank">
+        bridge.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L8" target="_blank">
+        device.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="APP_IDS">
+        <strong>APP_IDS</strong> = <code><span class="t">LibKeyleds</span><span class="t">::</span><span class="t">APP_ID_MIN</span>..<span class="t">LibKeyleds</span><span class="t">::</span><span class="t">APP_ID_MAX</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The full range of valid application IDs that can be used for initialization (i.e. <code><a href="../Keyleds/Device.html#open(path:String,app_id:UInt8,&)-class-method">Device.open</a></code>.)</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(path:String,app_id:UInt8)-class-method" class="signature"><strong>.new</strong>(path : String, app_id : UInt8)</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../Keyleds/Device.html">Device</a></code>.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#open(path:String,app_id:UInt8,&)-class-method" class="signature"><strong>.open</strong>(path : String, app_id : UInt8, &)</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../Keyleds/Device.html">Device</a></code> with the given parameters, yields it to a block, and automatically closes the device.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#blocks:Array(Keyblock)-instance-method" class="signature"><strong>#blocks</strong> : Array(Keyblock)</a>
+        
+          <div class="summary"><p>Gets all device LED <code><a href="../Keyleds/Keyblock.html">Keyblock</a></code>s.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#close-instance-method" class="signature"><strong>#close</strong></a>
+        
+          <div class="summary"><p>Closes the device handle.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#commit_leds-instance-method" class="signature"><strong>#commit_leds</strong></a>
+        
+          <div class="summary"><p>Applies pending lighting changes set by <code><a href="../Keyleds/Device.html#set_leds(block:BlockId,keys:Array(KeyColor))-instance-method">Device#set_leds</a></code> or <code><a href="../Keyleds/Device.html#set_led_block(block:BlockId,red:UInt8,green:UInt8,blue:UInt8)-instance-method">Device#set_led_block</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#custom_gkeys(enabled:Bool)-instance-method" class="signature"><strong>#custom_gkeys</strong>(enabled : Bool)</a>
+        
+          <div class="summary"><p>Enables or disable custom G-key behavior.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fd:IO::FileDescriptor-instance-method" class="signature"><strong>#fd</strong> : IO::FileDescriptor</a>
+        
+          <div class="summary"><p>Returns the device's underlying file descriptor.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#feature_count:UInt32-instance-method" class="signature"><strong>#feature_count</strong> : UInt32</a>
+        
+          <div class="summary"><p>Gets the number of HID++ features supported by the device.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#feature_id(feature_index:UInt8):UInt16-instance-method" class="signature"><strong>#feature_id</strong>(feature_index : UInt8) : UInt16</a>
+        
+          <div class="summary"><p>Finds the feature ID of a feature, given its index in the device's internal feature table.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#feature_index(feature_id:UInt16):UInt8-instance-method" class="signature"><strong>#feature_index</strong>(feature_id : UInt16) : UInt8</a>
+        
+          <div class="summary"><p>Given a feature's ID, returns its index in the device's internal table.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#flush-instance-method" class="signature"><strong>#flush</strong></a>
+        
+          <div class="summary"><p>Flushes pending inbound events, processing G-key presses if present.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gamemode_add(scancodes:Array(UInt8))-instance-method" class="signature"><strong>#gamemode_add</strong>(scancodes : Array(UInt8))</a>
+        
+          <div class="summary"><p>Adds the given keys, represented by their scancodes, to the game mode block list.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gamemode_max_blocked:UInt32-instance-method" class="signature"><strong>#gamemode_max_blocked</strong> : UInt32</a>
+        
+          <div class="summary"><p>Returns the maximum possible number of keys that can be blocked at a time during game mode.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gamemode_remove(scancodes:Array(UInt8))-instance-method" class="signature"><strong>#gamemode_remove</strong>(scancodes : Array(UInt8))</a>
+        
+          <div class="summary"><p>Remove the given keys, represented by their scancodes, from the game mode block list.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gamemode_reset-instance-method" class="signature"><strong>#gamemode_reset</strong></a>
+        
+          <div class="summary"><p>Resets the game mode blocked key list to empty.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gkeys_count:UInt32-instance-method" class="signature"><strong>#gkeys_count</strong> : UInt32</a>
+        
+          <div class="summary"><p>Returns the number of G-keys available on the device.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#keyboard_layout:KeyboardLayout-instance-method" class="signature"><strong>#keyboard_layout</strong> : KeyboardLayout</a>
+        
+          <div class="summary"><p>Returns the device's declared international keyboard layout.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#leds(block:BlockId,key_offset:UInt16,num_keys:UInt32):Array(KeyColor)-instance-method" class="signature"><strong>#leds</strong>(block : BlockId, key_offset : UInt16, num_keys : UInt32) : Array(KeyColor)</a>
+        
+          <div class="summary"><p>Starting at <code>key_offset</code> within the given block, returns <code>num_keys</code> current LED states.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name:String-instance-method" class="signature"><strong>#name</strong> : String</a>
+        
+          <div class="summary"><p>Returns the name of the device.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#on_gkey(&callback:GkeysType,BitArray-%3E)-instance-method" class="signature"><strong>#on_gkey</strong>(&callback : GkeysType, BitArray -> )</a>
+        
+          <div class="summary"><p>Defines a callback that should be run whenever a G-key (or M/MR-key) is pressed.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ping-instance-method" class="signature"><strong>#ping</strong></a>
+        
+          <div class="summary"><p>Resynchronizes with the device.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#protocol:ProtocolSpec-instance-method" class="signature"><strong>#protocol</strong> : ProtocolSpec</a>
+        
+          <div class="summary"><p>Returns the device's current protocol.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reportrate:UInt32-instance-method" class="signature"><strong>#reportrate</strong> : UInt32</a>
+        
+          <div class="summary"><p>Returns the device's current report rate.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_led_block(block:BlockId,red:UInt8,green:UInt8,blue:UInt8)-instance-method" class="signature"><strong>#set_led_block</strong>(block : BlockId, red : UInt8, green : UInt8, blue : UInt8)</a>
+        
+          <div class="summary"><p>Sets the entire LED block to a single uniform color.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_leds(block:BlockId,keys:Array(KeyColor))-instance-method" class="signature"><strong>#set_leds</strong>(block : BlockId, keys : Array(KeyColor))</a>
+        
+          <div class="summary"><p>Sets the LED color for the given keys.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_mkeys(state:Tuple(Bool,Bool,Bool))-instance-method" class="signature"><strong>#set_mkeys</strong>(state : Tuple(Bool, Bool, Bool))</a>
+        
+          <div class="summary"><p>Sets the lighting state for the M keys.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_mrkey(state:Bool)-instance-method" class="signature"><strong>#set_mrkey</strong>(state : Bool)</a>
+        
+          <div class="summary"><p>Sets the lighting state for the MR key.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_reportrate(rate:UInt32)-instance-method" class="signature"><strong>#set_reportrate</strong>(rate : UInt32)</a>
+        
+          <div class="summary"><p>Sets the keyboard's report rate to <code>rate</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_timeout(microseconds:UInt32)-instance-method" class="signature"><strong>#set_timeout</strong>(microseconds : UInt32)</a>
+        
+          <div class="summary"><p>Sets the device's HID++ command timeout.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#supported_rates:Array(UInt32)-instance-method" class="signature"><strong>#supported_rates</strong> : Array(UInt32)</a>
+        
+          <div class="summary"><p>Gets all supported report rates.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#type:Type-instance-method" class="signature"><strong>#type</strong> : Type</a>
+        
+          <div class="summary"><p>Returns the device's type.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#version:Version-instance-method" class="signature"><strong>#version</strong> : Version</a>
+        
+          <div class="summary"><p>Returns the device's current firmware version.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(path:String,app_id:UInt8)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(path : String, app_id : UInt8)
+
+        <a class="method-permalink" href="#new(path:String,app_id:UInt8)-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new <code><a href="../Keyleds/Device.html">Device</a></code>. Must be explicitly closed with <code><a href="../Keyleds/Device.html#close-instance-method">Device#close</a></code> after usage.</p>
+
+<ul><li><code>path</code> must be a valid path to the device's corresponding HID file (i.e. <code>/dev/hidraw1</code>).</li><li><code>app_id</code> is a constant identifier for use with all further device communication. See <code><a href="../Keyleds/Device.html#APP_IDS">APP_IDS</a></code> for valid arguments.</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="open(path:String,app_id:UInt8,&)-class-method">
+      <div class="signature">
+        
+        def self.<strong>open</strong>(path : String, app_id : UInt8, &)
+
+        <a class="method-permalink" href="#open(path:String,app_id:UInt8,&)-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new <code><a href="../Keyleds/Device.html">Device</a></code> with the given parameters, yields it to a block, and automatically closes the device.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="blocks:Array(Keyblock)-instance-method">
+      <div class="signature">
+        
+        def <strong>blocks</strong> : Array(<a href="../Keyleds/Keyblock.html">Keyblock</a>)
+
+        <a class="method-permalink" href="#blocks:Array(Keyblock)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Gets all device LED <code><a href="../Keyleds/Keyblock.html">Keyblock</a></code>s.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="close-instance-method">
+      <div class="signature">
+        
+        def <strong>close</strong>
+
+        <a class="method-permalink" href="#close-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Closes the device handle.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="commit_leds-instance-method">
+      <div class="signature">
+        
+        def <strong>commit_leds</strong>
+
+        <a class="method-permalink" href="#commit_leds-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Applies pending lighting changes set by <code><a href="../Keyleds/Device.html#set_leds(block:BlockId,keys:Array(KeyColor))-instance-method">Device#set_leds</a></code> or <code><a href="../Keyleds/Device.html#set_led_block(block:BlockId,red:UInt8,green:UInt8,blue:UInt8)-instance-method">Device#set_led_block</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="custom_gkeys(enabled:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>custom_gkeys</strong>(enabled : Bool)
+
+        <a class="method-permalink" href="#custom_gkeys(enabled:Bool)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Enables or disable custom G-key behavior. If <code>false</code>, G-keys will default to their corresponding F-keys.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L61" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fd:IO::FileDescriptor-instance-method">
+      <div class="signature">
+        
+        def <strong>fd</strong> : IO::FileDescriptor
+
+        <a class="method-permalink" href="#fd:IO::FileDescriptor-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the device's underlying file descriptor.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L66" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="feature_count:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>feature_count</strong> : UInt32
+
+        <a class="method-permalink" href="#feature_count:UInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Gets the number of HID++ features supported by the device.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L71" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="feature_id(feature_index:UInt8):UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>feature_id</strong>(feature_index : UInt8) : UInt16
+
+        <a class="method-permalink" href="#feature_id(feature_index:UInt8):UInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Finds the feature ID of a feature, given its index in the device's internal feature table.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L76" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="feature_index(feature_id:UInt16):UInt8-instance-method">
+      <div class="signature">
+        
+        def <strong>feature_index</strong>(feature_id : UInt16) : UInt8
+
+        <a class="method-permalink" href="#feature_index(feature_id:UInt16):UInt8-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Given a feature's ID, returns its index in the device's internal table.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L81" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="flush-instance-method">
+      <div class="signature">
+        
+        def <strong>flush</strong>
+
+        <a class="method-permalink" href="#flush-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Flushes pending inbound events, processing G-key presses if present.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L86" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gamemode_add(scancodes:Array(UInt8))-instance-method">
+      <div class="signature">
+        
+        def <strong>gamemode_add</strong>(scancodes : Array(UInt8))
+
+        <a class="method-permalink" href="#gamemode_add(scancodes:Array(UInt8))-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Adds the given keys, represented by their scancodes, to the game mode block list.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L107" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gamemode_max_blocked:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>gamemode_max_blocked</strong> : UInt32
+
+        <a class="method-permalink" href="#gamemode_max_blocked:UInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the maximum possible number of keys that can be blocked at a time during game mode.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L96" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gamemode_remove(scancodes:Array(UInt8))-instance-method">
+      <div class="signature">
+        
+        def <strong>gamemode_remove</strong>(scancodes : Array(UInt8))
+
+        <a class="method-permalink" href="#gamemode_remove(scancodes:Array(UInt8))-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Remove the given keys, represented by their scancodes, from the game mode block list.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L91" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gamemode_reset-instance-method">
+      <div class="signature">
+        
+        def <strong>gamemode_reset</strong>
+
+        <a class="method-permalink" href="#gamemode_reset-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Resets the game mode blocked key list to empty.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L102" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gkeys_count:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>gkeys_count</strong> : UInt32
+
+        <a class="method-permalink" href="#gkeys_count:UInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the number of G-keys available on the device.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L112" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="keyboard_layout:KeyboardLayout-instance-method">
+      <div class="signature">
+        
+        def <strong>keyboard_layout</strong> : <a href="../Keyleds/KeyboardLayout.html">KeyboardLayout</a>
+
+        <a class="method-permalink" href="#keyboard_layout:KeyboardLayout-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the device's declared international keyboard layout.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L118" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="leds(block:BlockId,key_offset:UInt16,num_keys:UInt32):Array(KeyColor)-instance-method">
+      <div class="signature">
+        
+        def <strong>leds</strong>(block : <a href="../Keyleds/BlockId.html">BlockId</a>, key_offset : UInt16, num_keys : UInt32) : Array(<a href="../Keyleds/KeyColor.html">KeyColor</a>)
+
+        <a class="method-permalink" href="#leds(block:BlockId,key_offset:UInt16,num_keys:UInt32):Array(KeyColor)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Starting at <code>key_offset</code> within the given block, returns <code>num_keys</code> current LED states.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L123" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name:String-instance-method">
+      <div class="signature">
+        
+        def <strong>name</strong> : String
+
+        <a class="method-permalink" href="#name:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the name of the device.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L131" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="on_gkey(&callback:GkeysType,BitArray->)-instance-method">
+      <div class="signature">
+        
+        def <strong>on_gkey</strong>(&callback : <a href="../Keyleds/GkeysType.html">GkeysType</a>, BitArray -> )
+
+        <a class="method-permalink" href="#on_gkey(&callback:GkeysType,BitArray-%3E)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Defines a callback that should be run whenever a G-key (or M/MR-key) is pressed.
+The second parameter is a <code>BitArray</code>, with the first bit representing the first key in the group.
+Triggered by <code><a href="../Keyleds/Device.html#flush-instance-method">Device#flush</a></code>.</p>
+
+<pre><code class="language-crystal"><span class="t">Keyleds</span><span class="t">::</span><span class="t">Device</span>.open(<span class="s">&quot;/dev/hidraw1&quot;</span>, <span class="n">1</span>) <span class="k">do</span> <span class="o">|</span>dev<span class="o">|</span>
+  dev.custom_gkeys(<span class="n">true</span>)
+
+  dev.on_gkey <span class="k">do</span> <span class="o">|</span><span class="k">type</span>, keys<span class="o">|</span>
+    puts <span class="s">&quot;is the first key on? </span><span class="i">#{</span>keys[<span class="n">0</span>]<span class="i">}</span><span class="s">&quot;</span>
+  <span class="k">end</span>
+
+  loop { dev.flush } <span class="c"># is the first key on? false</span>
+<span class="k">end</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L151" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ping-instance-method">
+      <div class="signature">
+        
+        def <strong>ping</strong>
+
+        <a class="method-permalink" href="#ping-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Resynchronizes with the device.
+Use as a recovery mechanism after another call has errored.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L178" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="protocol:ProtocolSpec-instance-method">
+      <div class="signature">
+        
+        def <strong>protocol</strong> : <a href="../Keyleds/Device/ProtocolSpec.html">ProtocolSpec</a>
+
+        <a class="method-permalink" href="#protocol:ProtocolSpec-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the device's current protocol.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L183" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reportrate:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>reportrate</strong> : UInt32
+
+        <a class="method-permalink" href="#reportrate:UInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the device's current report rate.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L189" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_led_block(block:BlockId,red:UInt8,green:UInt8,blue:UInt8)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_led_block</strong>(block : <a href="../Keyleds/BlockId.html">BlockId</a>, red : UInt8, green : UInt8, blue : UInt8)
+
+        <a class="method-permalink" href="#set_led_block(block:BlockId,red:UInt8,green:UInt8,blue:UInt8)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the entire LED block to a single uniform color.
+Must be committed with <code><a href="../Keyleds/Device.html#commit_leds-instance-method">Device#commit_leds</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L202" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_leds(block:BlockId,keys:Array(KeyColor))-instance-method">
+      <div class="signature">
+        
+        def <strong>set_leds</strong>(block : <a href="../Keyleds/BlockId.html">BlockId</a>, keys : Array(<a href="../Keyleds/KeyColor.html">KeyColor</a>))
+
+        <a class="method-permalink" href="#set_leds(block:BlockId,keys:Array(KeyColor))-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the LED color for the given keys.
+Must be committed with <code><a href="../Keyleds/Device.html#commit_leds-instance-method">Device#commit_leds</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L196" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_mkeys(state:Tuple(Bool,Bool,Bool))-instance-method">
+      <div class="signature">
+        
+        def <strong>set_mkeys</strong>(state : Tuple(Bool, Bool, Bool))
+
+        <a class="method-permalink" href="#set_mkeys(state:Tuple(Bool,Bool,Bool))-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the lighting state for the M keys.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L207" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_mrkey(state:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_mrkey</strong>(state : Bool)
+
+        <a class="method-permalink" href="#set_mrkey(state:Bool)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the lighting state for the MR key.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L214" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_reportrate(rate:UInt32)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_reportrate</strong>(rate : UInt32)
+
+        <a class="method-permalink" href="#set_reportrate(rate:UInt32)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the keyboard's report rate to <code>rate</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L219" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_timeout(microseconds:UInt32)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_timeout</strong>(microseconds : UInt32)
+
+        <a class="method-permalink" href="#set_timeout(microseconds:UInt32)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the device's HID++ command timeout.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L224" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="supported_rates:Array(UInt32)-instance-method">
+      <div class="signature">
+        
+        def <strong>supported_rates</strong> : Array(UInt32)
+
+        <a class="method-permalink" href="#supported_rates:Array(UInt32)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Gets all supported report rates.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L229" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="type:Type-instance-method">
+      <div class="signature">
+        
+        def <strong>type</strong> : <a href="../Keyleds/Device/Type.html">Type</a>
+
+        <a class="method-permalink" href="#type:Type-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the device's type.
+See <code><a href="../Keyleds/Device/Type.html">Type</a></code> for more info.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L242" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="version:Version-instance-method">
+      <div class="signature">
+        
+        def <strong>version</strong> : <a href="../Keyleds/Device/Version.html">Version</a>
+
+        <a class="method-permalink" href="#version:Version-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the device's current firmware version.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/nickbclifford/keyleds.cr/blob/v1.0.0/src/device.cr#L248" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
