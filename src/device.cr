@@ -154,10 +154,10 @@ class Keyleds::Device
     mask_callback = ->(type : GkeysType, mask : UInt16) {
       # Pretty sure there are always the same amount of M/MR keys present on any keyboard that has them
       size = case type
-        in .gkey?  then count
-        in .mkey?  then 3
-        in .mrkey? then 1
-      end
+             in .gkey?  then count
+             in .mkey?  then 3
+             in .mrkey? then 1
+             end
       arr = BitArray.new(size)
       0.upto(size - 1) do |i|
         arr[i] = mask.bit(i) == 1
